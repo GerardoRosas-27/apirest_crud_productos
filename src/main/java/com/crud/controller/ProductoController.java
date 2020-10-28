@@ -105,7 +105,8 @@ public class ProductoController {
 							productoService.save(producto);
 							return new ResponseEntity(new Mensaje("el producto se actualizo"), HttpStatus.OK);
 						} catch (Exception e) {
-							return new ResponseEntity(new Mensaje("error al actualizar el producto"), HttpStatus.BAD_REQUEST);
+							/*return new ResponseEntity(new Mensaje("error al actualizar el producto"), HttpStatus.BAD_REQUEST);*/
+							return new ResponseEntity<>(new Mensaje("error al actualizar"), HttpStatus.OK);
 
 						}
 					}
