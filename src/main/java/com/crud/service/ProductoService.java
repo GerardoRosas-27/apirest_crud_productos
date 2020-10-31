@@ -8,8 +8,10 @@ import org.springframework.stereotype.Service;
 
 import com.crud.entity.Producto;
 import com.crud.repository.IProductoRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class ProductoService {
 	
 	@Autowired
